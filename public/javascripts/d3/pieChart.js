@@ -96,9 +96,10 @@ var width = 300,
 var color = d3.scaleOrdinal()
   .range(["rgba(85, 205, 252, 0.4)","rgba(74, 152, 165, 0.3)","rgba(77, 161, 210, 0.3)", "rgba(77, 191, 184, 0.3)" ]);
 
-var linearColorScalebcPie = d3.scaleLinear()
+var linearColorScalebcPie = d3.scaleOrdinal()
             .domain([0, dataPie.length])
-            .range(["rgba(74, 198, 247, 0.2)", "rgba(3, 123, 170, 0.6)"]);
+            .range(["rgba(74, 198, 247, 0.6)", ,"rgba(77, 161, 210, 0.3)", "rgba(255, 33, 0, 0.4)", "rgba(255, 244, 102, 0.4)"]);
+            //.range(["rgba(74, 198, 247, 0.2)", "rgba(3, 123, 170, 0.6)"]);
   
 var pielabels = d3.pie()
   .value(function(d) { return d.presses; })(dataPie);

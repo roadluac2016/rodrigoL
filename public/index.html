@@ -18,7 +18,7 @@
 
 		<!-- D3 -->
 			<script src="javascripts/d3/d3.v4.min.js"></script> <!-- http://d3js.org/d3.v3.min.js -->
-			<script src="javascripts/d3/resized3.js"></script>
+			<script src="javascripts/d3/resizedCharts.js"></script>
 		<!--  D3js plugins -->
 			<script src="javascripts/d3/d3-selection-multi.v0.4.min.js"></script>
 
@@ -69,22 +69,21 @@
 
 					    <div class="collapse navbar-collapse" id="myNavbar">
 					      <ul class="nav navbar-nav">
-						        <li class="pushLi"><a href="#">
-						        	<img src="images/mundo.png" class="img-responsive girarImgMenu">
+						        <li><a href="#">
 						        	<p>Home</p>
 						        </a></li>
-						        <li class="pushLi2"><a href="#">
-						        	<img src="images/ojo.png" class="img-responsive girarImgMenu2">
+						        <li><a href="#">
+						        	<p>About</p>
+						        </a></li>
+						        <li><a href="#">
 						        	<p>Focus</p>
 						        </a></li>
-						        <li class="pushLi3"><a href="#">
-						        	<img src="images/lapTop.png" class="img-responsive girarImgMenu3">
-						        	<p>Tools</p>
+						        <li><a href="#">
+						        	<p>Skills & Tools</p>
+						        </a><!--<div id="animacion">gdgdg</div>--></li>
+						        <li><a href="#">
+						        	<p>Contact</p>
 						        </a></li>
-						        <li class="pushLi4"><a href="#">
-						        	<img src="images/corazon.png" class="img-responsive girarImgMenu4">
-						        	<p>About</p>
-						        </a><div id="animacion">gdgdg</div></li>
 					      </ul>
 					    </div>
 
@@ -114,7 +113,29 @@
 
 
 
+<!-- Contact-Form RIGHT.MODAL-->
+<div class="contactForm">
+	<span>&#10006;</span>
+	<div>
+		<img src="images/bird.gif" class="bird">
+		<a href="https://www.linkedin.com/in/roadluac/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+		<a href="https://www.behance.net/roluac" target="_blank"><i class="fa fa-behance-square" aria-hidden="true"></i></a>
+		<a href="https://soundcloud.com/rala09" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+		<a href="https://www.facebook.com/profile.php?id=100017132474848" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+	</div>
 
+	<form action="">
+		<label><i class="fa fa-address-book" aria-hidden="true"></i> Nombre:</label>
+		<input name="nombre" type="text">
+		<label><i class="fa fa-phone-square" aria-hidden="true"></i> Teléfono:</label>
+		<input type="text">
+		<label><i class="fa fa-envelope" aria-hidden="true"></i> E-mail:</label>
+		<input type="text"><br><br>
+		<label><i class="fa fa-comments" aria-hidden="true"></i>  Cuentame mas:</label>
+		<textarea name="" id="" cols="40" rows="4"></textarea>
+		<button><i class="fa fa-paper-plane-o" aria-hidden="true"></i> ENVIAR</button>
+	</form>
+</div>
 
 
 
@@ -142,17 +163,14 @@
 					</div>
 				</div>
 
-			   <!-- RETRATO-->
+			<!-- RETRATO-->
 				<div class="spriteManoCabezaBox"></div>
-			 
 
-
-		<!-- ** JS ** -->
+			<!-- ** JS ** -->
 			<!-- Control and functions "RETRATO"-->
 				<script type="text/javascript" src="javascripts/outerSapce.js"></script>
 			<!-- 3D BackGround-->
 				<script type="text/javascript" src="javascripts/threeJs/back3d.js" ></script>
-
 
 			<!-- OUTER-SPACE Background -->
 				<div class="outerSapce">
@@ -179,16 +197,10 @@
 				<div class="outerSapce2">
 
 						<p>Currently, i am self-taught in information and computation theory. I enjoy the topic  consciousness and intelligence in terms of computational complexity and i like the relationship between art and science. </p>
-				</div>
-
-						
+				</div>	
 
 			<!-- DIV Máscara -->
 				<div class="divMascara"></div>
-
-
-
-
 
 
 
@@ -199,7 +211,7 @@
 
 		<!-- SECTION 2 -->
 
-			<section class="sec2" >
+			<section class="sec2">
 				<div class="toolsTextBoxSec2">
 					<p> 
 						<span> < </span> 
@@ -212,24 +224,25 @@
 				</div>
 					
 				<div> 
-					<img src="images/burguer.png" class="img-responsive burguer">
+					<img src="images/burguer2.png" class="img-responsive burguer">
 					<!--<img src="images/monoEli.png" class="img-responsive monoEli">-->
 				</div><!-- END col-md-6 -->
-
 			</section>
 
 
-			<div class="flex-container">
-				<div class="toolsTextBoxSec2">
-					<p> 
-						<span> < </span> 
-						FOCUS
-						<span> /> </span>  
-					</p>
-					<p>
-						Analyze and synthesize information and data into knowledge <br> to create new and better life experiences through the use of in-trend technologies:
-					</p>
-				</div>
+		<section>
+			<div class="flexBoxes">
+				<div class="flex-container">
+					<div class="toolsTextBoxSec2">
+						<p> 
+							<span> < </span> 
+							FOCUS
+							<span> /> </span>  
+						</p>
+						<p>
+							Analyze and synthesize information and data into knowledge <br> to create new and better life experiences through the use of in-trend technologies:
+						</p>
+					</div>
 				  <div class="flex-item">
 				  	<img src="images/mobileFisrt.png" ><br>
 				  	Mobile <br>First
@@ -250,57 +263,92 @@
 				  	<img src="images/uiUx.png" ><br>
 				  	UX / UI
 				  </div>
+
+
+				  <div class="sBox1">
+							<div class="toolsTextBoxSec2">
+								<p> 
+									<span> < </span> 
+									LEARNING
+									<span> /> </span>  
+								</p>
+								<p>
+									Actually, i prepare to become Full-Stack Web Developer 
+								</p>
+							</div>
+							<div>
+				  				<span><b>
+				  					Full Stack Web Developer 
+				  					<span style="color: #f74a5b">(2017)</span>
+				  				</b></span> 
+				  				<span> / Google + UDACITY</span>
+				  			</div>
+				  			<div>
+				  				<span><b>Introduction to Jquery</b></span>
+				  				<span> / MICROSOFTx</span>
+				  			</div>
+				  			<div>
+				  				<span><b>Mobile Application Experiences</b></span> 
+				  				<span> / MITx</span>
+				  			</div>
+				  			<div>
+				  				<span><b>CS50</b></span> 
+				  				<span> / Harvardx</span>
+				  			</div>
+				  			<div>
+				  				<span><b>Responsive Data Visualization whit D3.js</b></span> 
+				  				<span> / UDEMY</span>
+				  			</div>
+				  			<div>
+				  				<span><b>Graphic Design</b></span>
+				  				<span> / UVM Tlalpan</span>
+				  			</div>
+				  			<div>
+				  				<span><b>Musical Production</b></span>
+				  				<span> / G-Martell CMTA</span>
+				  			</div>
+				  			<div>
+				  				<span><b>Minds and Machines</b></span>
+				  				<span> / MITx</span>
+				  			</div>
+				  			<div>
+				  				<span><b>HTML</b></span>
+				  				<span> /  W3C X + Intel</span>
+				  			</div>
+				  			<div>
+				  				<span><b>Relationship beetwen Math and Art</b></span>
+				  				<span> / Institute of Mathematics - UNAM</span>
+				  			</div>
+				  			<div>
+				  				<span><b>Posibilities and artistic uses of Arduino</b></span>
+				  				<span> / CM - CENART</span>
+				  			</div>
+			  			</div>
+				</div>
 			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		</section>
 
 
 
 	<!-- SECTION 3 -->
 		<section class="sec3">
-			
 			<div class="toolsTextBoxSec2">
-					<p> 
-						<span> < </span> 
-						Character skills
-						<span> /> </span>  
-					</p>
-					<p>
-						Will be increasingly important in a world of greater automation
-					</p>
+				<p> 
+					<span> < </span> 
+					Character skills
+					<span> /> </span>  
+				</p>
+				<p>
+					Will be increasingly important in a world of greater automation
+				</p>
 			</div>
-
 			<br><br><br>
-
 			<div class="chartPie">
 			  <!-- Pie Chart -->
 				<div id="pieChart"><img src="images/brain.png" alt="" class="brain"></div>
 				<script src="javascripts/d3/pieChart.js"></script>
 			</div>
 
-			
-
-			
 
 			<div id="spiderChart">
 				<div class="toolsTextBoxSec2">
@@ -323,123 +371,10 @@
 					  	</span>
 					</div>
 				</div>
-
 				<!-- Spider-JS -->
 				<script src="javascripts/d3/spiderD3.js"></script>
-			</div>
-				
+			</div>	
 		</section>
-
-
-
-		<section class="sec4">
-				<div class="flex-container">
-					<div class="toolsTextBoxSec2">
-						<p> 
-							<span> < </span> 
-							LEARNING
-							<span> /> </span>  
-						</p>
-						<p>
-							<span class="clickBox">Click on a box</span> to see more information
-						</p>
-					</div>
-					  <div class="flex-item">
-					  	<img src="images/mobileFisrt.png" ><br>
-					  	Front End <br>Developement
-					  </div>
-					  <div class="flex-item">
-					  	<img src="images/aReality.png" ><br>
-					  	Back End <br>Developement
-					  </div>
-					  <div class="flex-item">
-					  	<img src="images/technology/globalN.png" ><br>
-					  	Information and<br>Computation Theory
-					  </div>
-					  <div class="flex-item">
-					  	<img src="images/portableBrain.png" ><br>
-					  	Art <br>
-					  </div>
-					  <div class="flex-item">
-					  	<img src="images/uiUx.png" ><br>
-					  	UX / UI
-					  </div>
-				</div>
-
-			
-			<!-- Skills Box 
-			  	<div class="skillBox">
-					
-			  		<div class="sBox1">
-			  			<h2> MOOCs / School</h2>
-
-			  			<div>
-			  				<span><b>
-			  					Full Stack Web Developer 
-			  					<span style="color: #f74a5b">(2017)</span>
-			  				</b></span> 
-			  				<span> / Google + UDACITY</span>
-			  			</div>
-			  			<div>
-			  				<span><b>Introduction to Jquery</b></span>
-			  				<span> / MICROSOFTx</span>
-			  			</div>
-			  			<div>
-			  				<span><b>Mobile Application Experiences</b></span> 
-			  				<span> / MITx</span>
-			  			</div>
-			  			<div>
-			  				<span><b>CS50</b></span> 
-			  				<span> / Harvardx</span>
-			  			</div>
-			  			<div>
-			  				<span><b>Responsive Data Visualization whit D3.js</b></span> 
-			  				<span> / UDEMY</span>
-			  			</div>
-			  			<div>
-			  				<span><b>Graphic Design</b></span>
-			  				<span> / UVM Tlalpan</span>
-			  			</div>
-			  			<div>
-			  				<span><b>Musical Production</b></span>
-			  				<span> / G-Martell CMTA</span>
-			  			</div>
-			  			<div>
-			  				<span><b>Minds and Machines</b></span>
-			  				<span> / MITx</span>
-			  			</div>
-			  			<div>
-			  				<span><b>HTML</b></span>
-			  				<span> /  W3C X + Intel</span>
-			  			</div>
-			  			<div>
-			  				<span><b>Relationship beetwen Math and Art</b></span>
-			  				<span> / Institute of Mathematics - UNAM</span>
-			  			</div>
-			  			<div>
-			  				<span><b>Posibilities and artistic uses of Arduino</b></span>
-			  				<span> / CM - CENART</span>
-			  			</div>
-					</div> --><!-- END sBox1 -->
-			  		<div class="sBox2">
-
-		  				<p class="uniCode col-md-3"><span>&#9749;</span></p>
-		  				<div class="col-md-9">
-		  					<h1>Actually</h1>
-		  					<p>
-		  						I prepare to become Full-Stack Web Developer and i study mathematics at Khan academy to achieve optimally a master's degree in Computer Science at the ITAM in México and a Nanodegree in Artificial Intelligence at UDACITY. 
-		  					</p>
-	  					</div>
-
-			  		</div>
-
-			  	</div> 
-		</section>
-
-
-
-
-
 
 
 
@@ -452,26 +387,31 @@
 					<span> /> </span>  
 				</p>
 				<p>
-					My name is Rodrigo. I´m a Digital Creator.<br>For over 3 years I have worked as a Front End Web Developer.
+					Thank you. See you soon!<br>
+					<span><a href="roadluac@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>
+roadluac@gmail.com </a></span>
+					<span>  |</span>
+					<span class="phoneNumber1"><i class="fa fa-mobile" aria-hidden="true"></i>(044)</span>
+					<span class="phoneNumber"> 55 4346 3478</span>
 				</p>
+				
 			</div>
-			<img src="images/iphoneC.png" class="img-responsive">
+			<img src="images/iphoneC.png" class="phone img-responsive">
 		</section>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
 		<footer>
+			<div class="sBox2">
+				<p class="uniCode col-md-3"><span>&#9749;</span></p>
+				<div class="col-md-9">
+					<h1>Actually</h1>
+					<p>
+						I prepare to become Full-Stack Web Developer and i study mathematics at Khan academy to achieve optimally a master's degree in Computer Science at the ITAM in México and a Nanodegree in Artificial Intelligence at UDACITY. 
+					</p>
+				</div>
+			</div>
 		<!-- <h2> Where do we meet? </h2>-->
 				<!-- GOOGLE MAPS buttons
 			      <p style="font-size: black; font-weight: bold; width: 300px; padding: 2px; border-bottom:1px solid orange;"> HAZ CLICK EN ALGÚN BOTÓN o Elije alúno de la lista</p>

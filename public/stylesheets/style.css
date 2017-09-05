@@ -6,6 +6,7 @@ body {
 canvas {
 position: fixed;
 top:0%;
+background: linear-gradient(-70deg, #eaeaea, white)
 /*
 background: #eaf2ec; 
 background: -moz-radial-gradient(center, ellipse cover, #eaf2ec 2%, #eaf2ec 28%, #0082e5 58%, #1252aa 70%, #160212 100%); 
@@ -20,6 +21,7 @@ section {
 	height: auto;
 	background-color: transparent;
 	padding-top: 100px;
+	background-color: rgba(255,255,255, 0.9);
 }
 
 .sec3 h2 {
@@ -80,55 +82,34 @@ section {
 	.navbar.navbar-inverse {
 		position: relative;
 		width: 100%;
-		height: auto;
+		height: 50px;
 		margin:0px;
 		padding: 0px;
 		border-radius: 0px;
-		background-color: rgba(10,10,10, 0.8);
+		background-color: rgba(10,10,10, 0.9);
 		border:none;
 
 	}
 	.nav.navbar-nav{
 		position: relative;
 		width: 100%;
-		height: auto;
-		left: 20px;
+		height: 60px;
 	}
 	.nav.navbar-nav li {
 		position: relative;
-		width: calc((100% - 40px)/4);
-		height: auto;
+		width: calc((100%)/5);
+		height: 50px;
 		border: 1px solid #c9c9c9;
 		text-align: center;
 		display: inline-block;
-		padding: 0px 8px 0px 8px;
 		margin: 0px;
 	}
 	.nav.navbar-nav li a{
-		padding: 4px 8px 4px 8px;
 		margin: 0px;
+		font-family: 'Fira Sans Condensed', sans-serif; 
+		font-size: 18px; 
+		font-weight: 100;
 	}	
-	li a img {
-		position: relative;
-		width: 110px;
-		height: auto;
-		display: block;
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 4px;
-	}
-	li a p {
-		position: relative;
-		top:4px;
-		font-size: 14px;
-		color: white;
-		font-family: 'Anton', sans-serif;
-		letter-spacing: 1px;
-	}
-	li a img {
-		filter: brightness(0) invert(1);
-	}
 
 
 
@@ -136,7 +117,69 @@ section {
 
 
 
+.contactForm {
+	position: fixed;
+	width: 350px;
+	height: 100vh;
+	background-color: yellow;
+	float: right;
+	right: 0px;
+	top:50px;
+	z-index: 10000;
+	background:linear-gradient(-20deg, #E91E63, #FF5722);
+}
+.contactForm div{
+	position: relative;
+	width: 100%;
+	height: 120px;
+	margin:10px;
+}
+.contactForm span{
+	position: relative;
+	border-left:2px solid white;
+	border-right:2px solid white;
+	border-bottom:2px solid white;
+	padding:1px 4px 1px 4px;
+	height: 50px;
+	top:0px;
+	left: 45px;
+	color: white;
+	cursor:pointer;
+	background-color: #0caeff;
+	font-weight: normal;
+}
+.contactForm span:hover{	
+	background-color:transparent;
+}
+.contactForm a{
+	position: relative;
+	border:1px solid white;
+	float: right;
+	right: 25px;
+	top:21px;
+	font-size: 24px;
+	padding:10px;
+	color: white;
+}
+form{ width:100%;height:100%;border-radius:8px;box-shadow:0 0 40px -10px #000;padding:20px 30px;box-sizing:border-box;position:relative}
 
+	input{color:white; width:100%;padding:0px 3px 0px 3px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;transition:all .3s;border-bottom:2px solid #bebed2}
+	input:focus{border-bottom:2px solid white;}
+
+	form button{position:relative; font-family: 'Roboto', sans-serif; float:left;padding:8px 12px;margin:15px 0 0;border:1px solid white;background:black;color:white;cursor:pointer;transition:all .3s}
+	form button:hover{background:0;color:white}
+form label{
+	color: white;
+	margin-top: 15px;
+	font-weight: normal;
+}
+.bird {
+	position: relative;
+	width: 100px;
+	height: auto;
+	float: left;
+	top:6px;
+}
 
 
 
@@ -661,7 +704,11 @@ animation:move-clouds-back 200s linear infinite;
 .sec2 {
 	position: relative;
 	background-color:rgba(255,255,255,0.9);
-	border-top: 1px solid #c9c9c9;
+	border-top: 1px solid transparent;
+	-moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+	-webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+	border-image: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
+	border-image-slice: 1;
 	height: auto;
 }
 
@@ -708,13 +755,29 @@ animation:move-clouds-back 200s linear infinite;
 	color: red;
 }
 
+.flexBoxes {
 
-.flex-container {
-	position: relative;
+  position: relative;
   padding: 0;
   margin: 0;
   width: 100%;
+
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+
+
+}
+.flex-container {
+	position: relative;
+  padding: 0;
+  padding: 70px 20px 0px 20px;
+  width: 85%;
   list-style: none;
+
+
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
   
   display: -webkit-box;
   display: -moz-box;
@@ -724,42 +787,37 @@ animation:move-clouds-back 200s linear infinite;
   
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+
   background-color: white;
-
-  border: 2px solid transparent;
-	-moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
-	-webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
-	border-image: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
+  border:2px solid transparent;
+  -moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #009ddb 100%);
+	-webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #009ddb 100%);
+	border-image: linear-gradient(to bottom right, #3acfd5 0%, #009ddb 100%);
 	border-image-slice: 1;
-}
 
+}
 .flex-item {
   padding: 5px;
   width: 200px;
   height: 250px;
   margin-top: 10px;
-  
-
   color: black;
   text-align: center;
 }
 
 .flex-item:hover{
-  background-color: #ffff00;
+  	background-color: #ffff00;
 }
 
 .flex-item img {
-		position: relative;
-		width: 80%;
-		height: auto;
-		display: block;
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
+	position: relative;
+	width: 80%;
+	height: auto;
+	display: block;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-
-
 
 
 
@@ -806,7 +864,10 @@ animation:move-clouds-back 200s linear infinite;
 	width: 100%; 
 	padding-top: 50px;
 	border-bottom: 1px solid #c9c9c9;
-	border-top: 1px solid #c9c9c9;
+	-moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+	-webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+	border-image: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
+	border-image-slice: 1;
 }
 
 
@@ -819,13 +880,8 @@ animation:move-clouds-back 200s linear infinite;
 	float: none;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 3px;
-	background-color: white;
-	border: 1px solid transparent;
-	-moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
-	-webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
-	border-image: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
-	border-image-slice: 1;
+	padding: 0px 0px 60px 0px;
+	border-bottom: 1px solid #afafaf;
 }
 
 .use {
@@ -853,36 +909,24 @@ animation:move-clouds-back 200s linear infinite;
 
 .skillBox {
 	position: relative;
-	width: 100%; /* Cambiar 2.75 después del MQuery 968px*/
+	width: 100%; 
 	height: auto;
-	top: 60px;
-	float: right;
-	right: 0px;
 	margin:0px;
-	padding: 40px;
+	padding: 40px 0px 0px 0px;
 	
 }
-.skillBox img{
-position: absolute;
-	width: 600px;
-	max-width: 600px;
-  	min-width: 300px;
-	height: 634px;
-  overflow: hidden;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-	
-}
+
 .sBox1{
 	position: relative;
-	width: 400px; /* Cambiar 2.75 después del MQuery 968px*/
+	width: 100%; 
 	height: auto;
 	display: block;
 	float: none;
 	margin-left: auto;
 	margin-right: auto;
-
+	margin-top: 50px;
+	text-align: center;
+	padding-bottom: 70px;
 	
 }
 .barChart {
@@ -907,7 +951,7 @@ position: absolute;
 
 .chartPie {
 	position: relative;
-	width: 860px;
+	width: 65%;
 	height: auto;
 	display: block;
 	float: none;
@@ -955,7 +999,7 @@ position: absolute;
 	position: relative;
 	width: 100%;
 	height: auto;
-	font-size: 130px;
+	font-size: 100px;
 	text-align: center;
 }
 .uniCode span{
@@ -966,7 +1010,19 @@ position: absolute;
 	float: none;
 	margin-left: auto;
 	margin-right: auto;
-	top:-30px;
+	top:-10px;
+}
+
+.sBox22{
+	position: relative;
+	width: 100%;
+	height: 160px;
+	display: block;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	background:#eaeaea;
+	color: black;
 }
 
 .sBox2{
@@ -1030,7 +1086,12 @@ position: absolute;
 	height: auto;
 	width: 100%; 
 	margin: 0px;
-	background-color: rgba(255, 255, 255, 0.9); 
+	background-color: white;
+	  border-top: 2px solid transparent;
+	-moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+	-webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+	border-image: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
+	border-image-slice: 1;
 }
 
 .modal.fade {
@@ -1038,6 +1099,25 @@ position: absolute;
 }
 
 
+.toolsTextBoxSec2 i:nth-child(1) {
+	font-size: 32px;
+	padding:10px;
+}
+.phoneNumber1 { 
+	position: relative;
+	font-size: 27px;
+	font-family: 'Anton', sans-serif;
+	color: black;
+	letter-spacing: 2px;
+}
+
+.phoneNumber { 
+	position: relative;
+	font-size: 27px;
+	font-family: 'Anton', sans-serif;
+	color: red;
+	letter-spacing: 2px;
+}
 
 
 
@@ -1277,13 +1357,7 @@ position: absolute;
 		background:linear-gradient(-20deg, #E91E63, #FF5722);
 		padding-top: 25px;
 	}
-	.form{font-family: 'Roboto', sans-serif; width:100%;height:350px;border-radius:8px;box-shadow:0 0 40px -10px #000;padding:20px 30px;;box-sizing:border-box;position:relative}
-
-	input{font-family: 'Roboto', sans-serif;color:white; width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;transition:all .3s;border-bottom:2px solid #bebed2}
-	input:focus{border-bottom:2px solid white;}
-
-	button{font-family: 'Roboto', sans-serif; float:right;padding:8px 12px;margin:8px 0 0;border:1px solid white;background:0;color:white;cursor:pointer;transition:all .3s}
-	button:hover{background:black;;color:white}
+	
 
 	.descargas{
 		position: relative;
@@ -1339,21 +1413,6 @@ position: absolute;
 	}
 
 
-	form h2 span {
-		font-size: 24px; 
-		color: white; 
-		position: relative; 
-		float: right;
-	}
-
-	form h2 a {
-		position: relative;
-		font-size: 14px; 
-		color: white; 
-		position: relative; 
-		float: right;
-		text-decoration: none;
-	}
 
 
  
