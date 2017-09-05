@@ -9,14 +9,19 @@ var dataset = [
 							{keybc:"SEO", 			valuebc:30},
 							{keybc:"D3JS",			valuebc:8}
 						];   
+/*
 
+var marginBars ={left:10, right:10, top:10, bottom: 10}
+  , wbc = parseInt(d3.select('#chart').style('width'))
+  , wbc = wbc - marginBars.left - marginBars.right
+  , ratioUno = .1
+  , hbc = wbc * ratioUno;
 
-
-
+*/
         var marginBars = { top: 0, right: 0, bottom: 0, left: 0 },
-        wbc = parseInt(d3.select("#barChart").style('width'), 10),
+        wbc = parseInt(d3.select("#barChart").style('width')),
         wbc = wbc - marginBars.left - marginBars.right,
-        //ratio doesn't always have to be perfect, just about the ratio between the height and width--so that it won't resize based on a height larger than the container
+        
         ratioUno = 0.4,
         hbc = wbc * ratioUno;
 
@@ -79,12 +84,14 @@ var svgb = d3.select("#barChart").append("svg")
 			.attr("height", function(d,i){
 					return h - yscalebc(d.valuebc)-30;
 				})
+			.attr('stroke', 'black')
+      		.attr('stroke-width', 0.2)
 			.style("fill", function(d,i){
 					return linearColorScalebc (i);
 					//return OrdinalColorScale (i);
 				})
 			.on("mouseover", function(d,i){
-					d3.select(this).style("fill","yellow");
+					d3.select(this).style("fill","white");
 				})
 			.on("mousemove", function(d,i){
 					

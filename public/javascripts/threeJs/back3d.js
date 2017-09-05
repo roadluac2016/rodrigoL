@@ -2,14 +2,20 @@
 			var container, stats;
 			var camera, scene, renderer, particles, geometry, material, i, h, color, sprite, size;
 			var mouseX = 0, mouseY = 0;
-			var windowHalfX = window.innerWidth / 2;
-			var windowHalfY = window.innerHeight / 2;
+			var windowHalfX = window.innerWidth / 40;
+			var windowHalfY = window.innerHeight / 40;
 
 			function init() {
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 2, 2000 );
+				camera = new THREE.PerspectiveCamera(
+
+				 	95, // Numero de pártculas y posicion ANIMACIÓN
+				 	window.innerWidth / window.innerHeight, 
+				 	7, 
+				 	3000 // Entre menor es el número menos particulas ANIMACIÓN
+				 );
 				camera.position.z = 1000;
 
 				scene = new THREE.Scene();
@@ -88,7 +94,6 @@
 			function animate() {
 				requestAnimationFrame( animate );
 				render();
-				stats.update();
 			};
 			function render() {
 				var time = Date.now() * 0.00005;
@@ -98,6 +103,21 @@
 				h = ( 360 * ( 1.0 + time ) % 360 ) / 360;
 				material.color.setHSL( h, 0.5, 0.5 );
 				renderer.render( scene, camera );
+
+
+				document.getElementById("animacion").onclick = function() {myFunction()};
+
+		        function myFunction() {
+		            for (xx=10000; xx>-10000; xx--){
+		            	camera.position.x= xx;
+		            	console.log(xx);
+		            }	
+		            for (zz=1000; zz>-1000; zz--){
+		            	camera.position.z= zz;
+		            	console.log(zz);
+		            }      
+		        }
+  
 			};
 
 

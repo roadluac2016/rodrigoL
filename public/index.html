@@ -3,6 +3,13 @@
 	<head>
 
 	    <title> Rodrigo Luna CV</title>
+	    
+	    	<!-- Meta Tags -->
+  			  <meta charset="UTF-8">
+			  <meta name="description" content="Digital strategy">
+			  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+			  <meta name="author" content="Rodrigo Luna">
+			  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Three.js -->
 			<script src="javascripts/threeJs/three.min.js" ></script>
@@ -30,24 +37,25 @@
 
 		<!-- Google Fonts -->
 			<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:100" rel="stylesheet">
 
 
 	</head>
 
-	<body>
-
+	<body style="background-color: #ededed">
 
 		
 		<!-- Contacto PESTAÑA! -->
-		<div class="contactoPestana">
-			<i class="fa fa-commenting" aria-hidden="true"></i>
-		</div>
+			<div class="contactoPestana">
+				<i class="fa fa-commenting" aria-hidden="true"></i>
+			</div>
+
+
 
 		<!-- MENU! -->
 			<header>
 
 					<nav class="navbar navbar-inverse">
-
 					  <div class="container-fluid">
 
 					    <div class="navbar-header">
@@ -76,13 +84,18 @@
 						        <li class="pushLi4"><a href="#">
 						        	<img src="images/corazon.png" class="img-responsive girarImgMenu4">
 						        	<p>About</p>
-						        </a></li>
+						        </a><div id="animacion">gdgdg</div></li>
 					      </ul>
 					    </div>
 
-					  </div>
+					  </div> <!-- END container-fluid -->
+
 					</nav>
+					
+					<!-- Menu Interactivity -->
+						<script src="javascripts/menuInter.js"></script>
 				</header>
+
 
 
 
@@ -121,33 +134,17 @@
 							<i class="fa fa-handshake-o" aria-hidden="true"></i><br>
 							WELCOME!
 						</p>
-						<span>You are in home.</span>
+						<strong>
+							Put the 
+							<span><b>cursor here</span></b><br>
+							and lets get trip
+						</strong>
 					</div>
 				</div>
-				
+
+			   <!-- RETRATO-->
 				<div class="spriteManoCabezaBox"></div>
-
-				<h1 class="titleHome">
-					RODRIGO LUNA
-					<span class="counterBoxxx"></span> 
-					<span >Digital Creator</span>
-				</h1>
-
-				<div class="paraBox">
-					<div class="parallelogram" ></div>
-					<p>
-						<span style="font-size: 46px;"> 
-							<span style="color: red;"> < </span> 
-							Hello!
-							<span style="color: red;"> /> </span>  
-						</span><br>
-						<span style="font-size: 36px;">I am a digital creator in Mexico</span><br> 
-						<span style="font-family:arial; font-weight: 100;">Focused on developing ideas that require the use of actual media and universal data<br>
-		 				as a fundamental part of "creative" production.</span>
-					</p>
-				</div>
-
-
+			 
 
 
 		<!-- ** JS ** -->
@@ -155,9 +152,6 @@
 				<script type="text/javascript" src="javascripts/outerSapce.js"></script>
 			<!-- 3D BackGround-->
 				<script type="text/javascript" src="javascripts/threeJs/back3d.js" ></script>
-
-
-
 
 
 			<!-- OUTER-SPACE Background -->
@@ -178,7 +172,16 @@
 						<div class="stuck"></div>
 						<div class="stuck"></div>
 						<div class="stuck"></div>
+
+						<div class="alienShip"></div>
 				</div>
+
+				<div class="outerSapce2">
+
+						<p>Currently, i am self-taught in information and computation theory. I enjoy the topic  consciousness and intelligence in terms of computational complexity and i like the relationship between art and science. </p>
+				</div>
+
+						
 
 			<!-- DIV Máscara -->
 				<div class="divMascara"></div>
@@ -189,155 +192,249 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<div class="hello">
+			<p><p>
+		</div>
 
 
 		<!-- SECTION 2 -->
 
-				<section class="sec2" >
-
-					<div class="row">
-						<div class="col-md-6"> 
-							<img src="images/burguer.png" class="img-responsive burguer">
-						</div><!-- END col-md-6 -->
-
-
-						<div class="col-md-6" style="top: 30px;">
-
-							<p>
-								<span style="font-size: 36px;">The important thing to me is:</span><br> 
-								<span style="font-family:arial; font-weight: 100;">
-									Synthesizing pure information or big-data into knowledge to create new products and best life experiences through the use of this technologies:  
-								</span>
-							</p>
-
-							<ul class="flex-container">
-							  <li class="flex-item"><img src="images/goeGeo.png" class="img-responsive girarImgMenu">UX / UI</li>
-							  <li class="flex-item"><img src="images/goeGeo.png"  class="img-responsive girarImgMenu">Augmented <br>Reality</li>
-							  <li class="flex-item"><img src="images/goeGeo.png"  class="img-responsive girarImgMenu">Internet <br>Networks</li>
-							  <li class="flex-item"><img src="images/goeGeo.png" class="img-responsive girarImgMenu">Mobile <br>Devices</li>
-							  <li class="flex-item"><img src="images/goeGeo.png"  class="img-responsive girarImgMenu">Artificial <br>Intelligence</li>
-							</ul>
-						</div> <!-- END col-md-6 -->
-					</div> <!--END row -->
-
-
-				</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<!-- SECTION 3 -->
-			<section class="sec3">
-					<!-- Spider-JS -->
-						<div class="spiderBox">
-								<div class="toolsTextBox">
-									<p>
-										<span style="font-size: 46px;"> 
-											<span style="color: red;"> < </span> 
-											TOOLS
-											<span style="color: red;"> /> </span>  
-										</span><br>
-										<span>							
-											Tools that help make this life the best universal experience.
-										</span>
-									</p>
-								</div>
-
-								<div class="subtitlesSec2">
-									<div class="use">
-									  	<span>_____   Lo se usar</span><br>
-								 		<p>
-								 			<span style="color: red;"> - - - -   </span>
-								 			Usando actualmente
-								 		</p>
-									</div>
-									<div class="instructions">
-									  	<span>
-									  		<i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-									  		Puedes mover los círculos de su posición 
-									  	</span>
-									</div>
-								</div>
-								<script src="javascripts/d3/spiderD3.js"></script>
-						</div><!-- spiderBox -->
-				 		
-
-						<div class="charts">
-								<div class="chartCalc">
-								  <div class="calcPie">
-								  		<!-- Pie Chart -->
-										<div id="pieChart"></div>
-										<script src="javascripts/d3/pieChart.js"></script>
-								  </div>
-								  <div class="calcPie">
-								  	<div class="imgOjoCerebro">
-								  		<img src="images/ojoCerebro.png" class="img-responsive">
-								  	</div>
-								  </div>
-								</div>
-
-								<div class="chartCalc">
-								  <!-- Barchart D3-js-->
-									<div id="barChart"></div>
-									<script src="javascripts/d3/barchart.js"></script> 
-								</div>
-
-								<div class="chartCalc">
-								  <!-- Scatterplot D3-js-->
-									<script src="javascripts/d3/scatterplot.js"></script> 
-								</div>
-						</div><!-- charts-->
+			<section class="sec2" >
+				<div class="toolsTextBoxSec2">
+					<p> 
+						<span> < </span> 
+						Hello!
+						<span> /> </span>  
+					</p>
+					<p>
+						My name is Rodrigo. I´m a Digital Creator.<br>For over 3 years I have worked as a Front End Web Developer.
+					</p>
+				</div>
+					
+				<div> 
+					<img src="images/burguer.png" class="img-responsive burguer">
+					<!--<img src="images/monoEli.png" class="img-responsive monoEli">-->
+				</div><!-- END col-md-6 -->
 
 			</section>
 
 
+			<div class="flex-container">
+				<div class="toolsTextBoxSec2">
+					<p> 
+						<span> < </span> 
+						FOCUS
+						<span> /> </span>  
+					</p>
+					<p>
+						Analyze and synthesize information and data into knowledge <br> to create new and better life experiences through the use of in-trend technologies:
+					</p>
+				</div>
+				  <div class="flex-item">
+				  	<img src="images/mobileFisrt.png" ><br>
+				  	Mobile <br>First
+				  </div>
+				  <div class="flex-item">
+				  	<img src="images/aReality.png" ><br>
+				  	Augmented <br>Reality
+				  </div>
+				  <div class="flex-item">
+				  	<img src="images/technology/globalN.png" ><br>
+				  	Global / Local <br>Networks
+				  </div>
+				  <div class="flex-item">
+				  	<img src="images/portableBrain.png" ><br>
+				  	Artificial <br>Intelligence
+				  </div>
+				  <div class="flex-item">
+				  	<img src="images/uiUx.png" ><br>
+				  	UX / UI
+				  </div>
+			</div>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- SECTION 3 -->
+		<section class="sec3">
+			
+			<div class="toolsTextBoxSec2">
+					<p> 
+						<span> < </span> 
+						Character skills
+						<span> /> </span>  
+					</p>
+					<p>
+						Will be increasingly important in a world of greater automation
+					</p>
+			</div>
+
+			<br><br><br>
+
+			<div class="chartPie">
+			  <!-- Pie Chart -->
+				<div id="pieChart"><img src="images/brain.png" alt="" class="brain"></div>
+				<script src="javascripts/d3/pieChart.js"></script>
+			</div>
+
+			
+
+			
+
+			<div id="spiderChart">
+				<div class="toolsTextBoxSec2">
+					<p> 
+						<span> < </span> 
+						TOOLS
+						<span> /> </span>  
+					</p>
+				</div>
+				<div class="instrucciones">
+					<div class="use">
+					  	<span>_____   Usando actualmente</span><br>
+				 		<span style="color: red;"> - - - -   </span>
+				 		Se usarlo
+			 		</div>
+					<div class="instructions">
+					  	<span>
+					  		<i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+					  		Puedes mover los círculos de su posición 
+					  	</span>
+					</div>
+				</div>
+
+				<!-- Spider-JS -->
+				<script src="javascripts/d3/spiderD3.js"></script>
+			</div>
+				
+		</section>
+
+
+
+		<section class="sec4">
+				<div class="flex-container">
+					<div class="toolsTextBoxSec2">
+						<p> 
+							<span> < </span> 
+							LEARNING
+							<span> /> </span>  
+						</p>
+						<p>
+							<span class="clickBox">Click on a box</span> to see more information
+						</p>
+					</div>
+					  <div class="flex-item">
+					  	<img src="images/mobileFisrt.png" ><br>
+					  	Front End <br>Developement
+					  </div>
+					  <div class="flex-item">
+					  	<img src="images/aReality.png" ><br>
+					  	Back End <br>Developement
+					  </div>
+					  <div class="flex-item">
+					  	<img src="images/technology/globalN.png" ><br>
+					  	Information and<br>Computation Theory
+					  </div>
+					  <div class="flex-item">
+					  	<img src="images/portableBrain.png" ><br>
+					  	Art <br>
+					  </div>
+					  <div class="flex-item">
+					  	<img src="images/uiUx.png" ><br>
+					  	UX / UI
+					  </div>
+				</div>
+
+			
+			<!-- Skills Box 
+			  	<div class="skillBox">
+					
+			  		<div class="sBox1">
+			  			<h2> MOOCs / School</h2>
+
+			  			<div>
+			  				<span><b>
+			  					Full Stack Web Developer 
+			  					<span style="color: #f74a5b">(2017)</span>
+			  				</b></span> 
+			  				<span> / Google + UDACITY</span>
+			  			</div>
+			  			<div>
+			  				<span><b>Introduction to Jquery</b></span>
+			  				<span> / MICROSOFTx</span>
+			  			</div>
+			  			<div>
+			  				<span><b>Mobile Application Experiences</b></span> 
+			  				<span> / MITx</span>
+			  			</div>
+			  			<div>
+			  				<span><b>CS50</b></span> 
+			  				<span> / Harvardx</span>
+			  			</div>
+			  			<div>
+			  				<span><b>Responsive Data Visualization whit D3.js</b></span> 
+			  				<span> / UDEMY</span>
+			  			</div>
+			  			<div>
+			  				<span><b>Graphic Design</b></span>
+			  				<span> / UVM Tlalpan</span>
+			  			</div>
+			  			<div>
+			  				<span><b>Musical Production</b></span>
+			  				<span> / G-Martell CMTA</span>
+			  			</div>
+			  			<div>
+			  				<span><b>Minds and Machines</b></span>
+			  				<span> / MITx</span>
+			  			</div>
+			  			<div>
+			  				<span><b>HTML</b></span>
+			  				<span> /  W3C X + Intel</span>
+			  			</div>
+			  			<div>
+			  				<span><b>Relationship beetwen Math and Art</b></span>
+			  				<span> / Institute of Mathematics - UNAM</span>
+			  			</div>
+			  			<div>
+			  				<span><b>Posibilities and artistic uses of Arduino</b></span>
+			  				<span> / CM - CENART</span>
+			  			</div>
+					</div> --><!-- END sBox1 -->
+			  		<div class="sBox2">
+
+		  				<p class="uniCode col-md-3"><span>&#9749;</span></p>
+		  				<div class="col-md-9">
+		  					<h1>Actually</h1>
+		  					<p>
+		  						I prepare to become Full-Stack Web Developer and i study mathematics at Khan academy to achieve optimally a master's degree in Computer Science at the ITAM in México and a Nanodegree in Artificial Intelligence at UDACITY. 
+		  					</p>
+	  					</div>
+
+			  		</div>
+
+			  	</div> 
+		</section>
 
 
 
@@ -348,36 +445,17 @@
 
 
 		<section class="sec4">
-					<div class="row">
-						<div class="col-md-6"> 
-							<img src="images/burguer.png" class="img-responsive burguer">
-						</div><!-- END col-md-6 -->
-
-
-						<div class="col-md-6" style="top: 30px;">
-
-							<div class="toolsTextBox">
-									<p>
-										<span style="font-size: 46px;"> 
-											<span style="color: red;"> < </span> 
-											ACTUALLY
-											<span style="color: red;"> /> </span>  
-										</span><br>
-										<span>							
-											Tools that help make this life the best universal experience.
-										</span>
-									</p>
-								</div>
-
-							<ul class="flex-container">
-							  <li class="flex-item"><img src="images/goeGeo.png" class="img-responsive girarImgMenu">UX / UI</li>
-							  <li class="flex-item"><img src="images/goeGeo.png"  class="img-responsive girarImgMenu">Augmented <br>Reality</li>
-							  <li class="flex-item"><img src="images/goeGeo.png"  class="img-responsive girarImgMenu">Internet <br>Networks</li>
-							  <li class="flex-item"><img src="images/goeGeo.png" class="img-responsive girarImgMenu">Mobile <br>Devices</li>
-							  <li class="flex-item"><img src="images/goeGeo.png"  class="img-responsive girarImgMenu">Artificial <br>Intelligence</li>
-							</ul>
-						</div> <!-- END col-md-6 -->
-					</div> <!--END row -->
+			<div class="toolsTextBoxSec2">
+				<p> 
+					<span> < </span> 
+					Contact
+					<span> /> </span>  
+				</p>
+				<p>
+					My name is Rodrigo. I´m a Digital Creator.<br>For over 3 years I have worked as a Front End Web Developer.
+				</p>
+			</div>
+			<img src="images/iphoneC.png" class="img-responsive">
 		</section>
 
 
@@ -393,54 +471,39 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 		<footer>
-			<div class="row">
-					  <h2 style="color: white;">Descarga CV completo</h2>
-					  
-				</div>
+		<!-- <h2> Where do we meet? </h2>-->
+				<!-- GOOGLE MAPS buttons
+			      <p style="font-size: black; font-weight: bold; width: 300px; padding: 2px; border-bottom:1px solid orange;"> HAZ CLICK EN ALGÚN BOTÓN o Elije alúno de la lista</p>
+			      <div id="1" class="btn btn-warning" style="padding:4px; cursor:pointer;">Restaurants</div>
+			      <div id="2" class="btn btn-warning" style="padding:4px;cursor:pointer;">Pubs</div>
+			      <div id="3" class="btn btn-warning" style="padding:4px;cursor:pointer;">Nature</div>
+			      <br>
+			      <br>
+			      
+
+				<div>
 					<div class="descargas">
-						<a href="documents/cv9.1.doc" target="_blanck"><div class="descUno">
-						<img src="images/cuartilla.png" class="img-responsive">
-							<span>Descarga CV (diseño)</span>
-						</div></a>
+						<a href="documents/cv9.1.doc" target="_blanck">
+								<div class="descUno">
+								<img src="images/cuartilla.png" class="img-responsive">
+								<span>Descarga CV (diseño)</span>
+						</a>
 						<a href="http://www.stps.gob.mx/gobmx/estadisticas/" target="_blank"><div class="descUno">
-							<img src="images/chart.png" class="img-responsive">
-							<span>Descarga CV (word)</span>
-						</div></a>
+								<img src="images/chart.png" class="img-responsive">
+								<span>Descarga CV (word)</span>
+						</a>
 					</div>
 				</div>
-			</div>
+-->
+
+				<!-- <div id="map-canvas" style="width: 100vw;height: 300px; margin:0px; padding: 0px;"></div>  
+			 Jquery & Google Maps API-Key reference -->
+			    <!-- DEBEN DE IR DENTRO DEL BODY, DESPUES DEL HTML Y ANTES DEL SCRIPT PARA QUE LA API FUNCION
+			        <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+			     	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCUZM85W11vNISuvKb-g12S9eekbcMaW8&callback=initMap"></script>E-->
+			<!-- GOOGLE MAPS API Archivo 
+			    <script src="javascripts/mapsApi.js" ></script>-->
 		</footer>
 
 
@@ -453,143 +516,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<!-- Move Canvas -->
-		<script type="text/javascript">
-				$( ".titleHome" ).mouseover(function() {
-					$("canvas").stop().animate({ 
-					        top: "-100%",
-					      }, 1000 );
-					$(".outerSapce").stop().animate({ 
-					        top: "0px",
-					      }, 1000 );
-					$(".blobs").stop().addClass("animationControlBlobs");
-					$(".youBox").stop().addClass("bounceOut");
-				});
-
-				$( ".titleHome" ).mouseout(function() {
-					$("canvas").stop().animate({ 
-					        top: "0px",
-					      }, 1000 );
-					$(".outerSapce").stop().animate({ 
-					        top: "100%",
-					      }, 1000 );
-					$(".blobs").stop().removeClass("animationControlBlobs");
-					$(".youBox").stop().removeClass("bounceOut");
-					$('.youBox').delay(1500)(function(){
-				        $('.youBox').addClass('bounceIn');
-				    });
-				});
-
-		</script>
-
-
-
-
-		<!-- Move CANVAS-->
-
-			<script type="text/javascript">
-
-			var filterVal = 'brightness(0)';
-			var filterVal2 = 'brightness(10)';
-
-
-
-
-				$('.pushLi').on('mouseover', function() {
-					$('.girarImgMenu').addClass('imgTrans');
-					$('.girarImgMenu')  .css('filter',filterVal)
-										.css('webkitFilter',filterVal)
-										.css('mozFilter',filterVal)
-										.css('oFilter',filterVal)
-										.css('msFilter',filterVal);
-				});
-				$('.pushLi').on('mouseout', function() {
-					$('.girarImgMenu').removeClass('imgTrans')
-					$('.girarImgMenu')  .css('filter',filterVal2)
-										.css('webkitFilter',filterVal2)
-										.css('mozFilter',filterVal2)
-										.css('oFilter',filterVal2)
-										.css('msFilter',filterVal2);
-				});
-
-
-
-				$('.pushLi2').on('mouseover', function() {
-					$('.girarImgMenu2').addClass('imgTrans');
-					$('.girarImgMenu2')  .css('filter',filterVal)
-										.css('webkitFilter',filterVal)
-										.css('mozFilter',filterVal)
-										.css('oFilter',filterVal)
-										.css('msFilter',filterVal);
-				});
-				$('.pushLi2').on('mouseout', function() {
-					$('.girarImgMenu2').removeClass('imgTrans');
-					$('.girarImgMenu2')  .css('filter',filterVal2)
-										.css('webkitFilter',filterVal2)
-										.css('mozFilter',filterVal2)
-										.css('oFilter',filterVal2)
-										.css('msFilter',filterVal2);
-				});
-
-
-
-				$('.pushLi3').on('mouseover', function() {
-					$('.girarImgMenu3').addClass('imgTrans');
-					$('.girarImgMenu3')  .css('filter',filterVal)
-										.css('webkitFilter',filterVal)
-										.css('mozFilter',filterVal)
-										.css('oFilter',filterVal)
-										.css('msFilter',filterVal);
-				});
-				$('.pushLi3').on('mouseout', function() {
-					$('.girarImgMenu3').removeClass('imgTrans');
-					$('.girarImgMenu3')  .css('filter',filterVal2)
-										.css('webkitFilter',filterVal2)
-										.css('mozFilter',filterVal2)
-										.css('oFilter',filterVal2)
-										.css('msFilter',filterVal2);
-				});
-
-
-
-				$('.pushLi4').on('mouseover', function() {
-					$('.girarImgMenu4').addClass('imgTrans');
-					$('.girarImgMenu4')  .css('filter',filterVal)
-										.css('webkitFilter',filterVal)
-										.css('mozFilter',filterVal)
-										.css('oFilter',filterVal)
-										.css('msFilter',filterVal);
-				});
-				$('.pushLi4').on('mouseout', function() {
-					$('.girarImgMenu4').removeClass('imgTrans');
-					$('.girarImgMenu4')  .css('filter',filterVal2)
-										.css('webkitFilter',filterVal2)
-										.css('mozFilter',filterVal2)
-										.css('oFilter',filterVal2)
-										.css('msFilter',filterVal2);
-				});
-
-
-
-			</script>
 
 
 

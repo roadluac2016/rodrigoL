@@ -3,20 +3,17 @@
 
 
 
+/* __________________________________________ PIE CHART */
 
 .arc text {
-  font: 10px sans-serif;
+  font-size: 14px;
   text-anchor: middle;
-  color: white;
+  color: black;
 }
 
+/* border del pie chart*/
 .arc path {
-  stroke: #fff;
-}
-
-#pieChart svg {
-
-  /* background-color: yellow; */
+  stroke: #bababa;
 }
 
 
@@ -62,11 +59,6 @@
   stroke-width: 0;
 }
 
-#barChart{
-  position: relative;
-  width:100%;
-  height: 100%;
-}
 
 .svgg{
 	background-color: white;
@@ -75,22 +67,22 @@
 
 
 
-/* Scatterplot TOOL-TIPS-DIV */
-  div.tooltip {   
-    position: absolute;           
-    text-align: center;           
-    width: 100px;                  
-    height: 35px;                 
-    padding: 3px;             
-    font-size:11px;
-  	font-family: 'Noto Sans', sans-serif;
-  	font-weight: 400px;
-    background: #008AB8;           
-    border: 0px;      
-    border-radius: 6px;           
-    pointer-events: none;
-    color: white;        
-  }
+/* ______________________________________________ Scatterplot TOOL-TIPS-DIV */
+ div.tooltip {   
+      position: absolute;           
+      text-align: center;           
+      width: 100px;                  
+      height: 35px;                 
+      padding: 3px;             
+      font-size:11px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400px;
+      background: #008AB8;           
+      border: 0px;      
+      border-radius: 6px;           
+      pointer-events: none;
+      color: white;        
+    }
 
 
 
@@ -99,7 +91,8 @@
 
 
 
-/* BarChart + Spider */
+
+/* _________________________________________________BarChart + Spider */
 
   .link {
     fill: none;
@@ -145,7 +138,7 @@ circle {
 }
 
 text {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 200;
   font-family: 'Roboto', sans-serif;
   pointer-events: none;
@@ -160,13 +153,13 @@ text {
 
 
 
-/**  AXIS  */
+/* _____________________________________________________________ AXIS  */
 
-/* Lineas de Axis */
+/* Lineas de Axis de BarChart y LineChart */
 .axis path,
 				.axis line {
 					fill: none;
-					stroke: white;
+					stroke: gray;
 					shape-rendering: crispEdges;
 					color: blue;
 				}

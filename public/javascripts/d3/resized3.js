@@ -4,6 +4,7 @@
 			        d3.select("svg").remove();
 			        d3.select("svg").remove();
 			        d3.select("svg").remove();
+			        d3.select("svg").remove();
 
 
 
@@ -102,7 +103,7 @@
 										//return OrdinalColorScale (i);
 									})
 								.on("mouseover", function(d,i){
-										d3.select(this).style("fill","yellow");
+										d3.select(this).style("fill","white");
 									})
 								.on("mousemove", function(d,i){
 										
@@ -204,27 +205,27 @@
 
 
 	                      var marginSpider = { top: 0, right: 0, bottom: 0, left: 0 },
-	                      width = parseInt(d3.select(".spiderBox").style('width'), 10),
+	                      width = parseInt(d3.select("#spiderChart").style('width'), 10),
 	                      width = width - marginSpider.left - marginSpider.right,
 	                      //ratio doesn't always have to be perfect, just about the ratio between the height and width--so that it won't resize based on a height larger than the container
-	                      ratio = 0.5,
-	                      height = width * ratio+10;
+	                      ratio = 0.47,
+	                      height = width * ratio+5;
 
 
 
 	              var simulation = d3.forceSimulation(nodes)
 	                  .nodes(d3.values(nodes))
-	                  .force("link", d3.forceLink(links).distance(65))          
+	                  .force("link", d3.forceLink(links).distance(85))          
 	                  .force("charge", d3.forceManyBody().strength(-90))
 	                  //.force("collide", d3.forceCollide().radius(function(d) { return d.r + 0.5; }).iterations(2))
 	                 // .force("x", d3.forceX().strength(0.002))
 	                 // .force("y", d3.forceY().strength(0.002))               
-	                 .force("center", d3.forceCenter( width /2, height/2 ))
+	                 .force("center", d3.forceCenter( width /4, height/2.5 ))
 	                  .on("tick", tick);
 	                //  .restart();
 
 
-	              var svg = d3.select(".spiderBox").append("svg")
+	              var svg = d3.select("#spiderChart").append("svg")
 	                  .attr("width", width)
 	                  .attr("height", height);
 
@@ -325,6 +326,191 @@
 
 
 
+	              // ___________________________________________ Line Chart
+var dataline1 = [
+
+     {"mes":1, "impuestoPorcentaje":20},
+     {"mes":2, "impuestoPorcentaje":14},
+     {"mes":3, "impuestoPorcentaje":20},
+     {"mes":4, "impuestoPorcentaje":21},
+     {"mes":5, "impuestoPorcentaje":15},
+     {"mes":6, "impuestoPorcentaje":22},
+     {"mes":7, "impuestoPorcentaje":9},
+     {"mes":8, "impuestoPorcentaje":6},
+     {"mes":9, "impuestoPorcentaje":23},
+     {"mes":10, "impuestoPorcentaje":7},
+     {"mes":11, "impuestoPorcentaje": 40},
+     {"mes":12, "impuestoPorcentaje": 45}
+];
+
+
+
+var dataline2 = [
+
+     {"mes":1, "impuestoPorcentaje":14},
+     {"mes":2, "impuestoPorcentaje":19},
+     {"mes":3, "impuestoPorcentaje":24},
+     {"mes":4, "impuestoPorcentaje":24},
+     {"mes":5, "impuestoPorcentaje":24},
+     {"mes":6, "impuestoPorcentaje":27},
+     {"mes":7, "impuestoPorcentaje":32},
+     {"mes":8, "impuestoPorcentaje":38},
+     {"mes":9, "impuestoPorcentaje":11},
+     {"mes":10, "impuestoPorcentaje":25},
+     {"mes":11, "impuestoPorcentaje": 40},
+     {"mes":12, "impuestoPorcentaje": 45}
+
+];
+
+
+var marginlc = { top: 0, right: 0, bottom: 0, left: 0 },
+wlc = parseInt(d3.select("#barChart").style('width')),
+wlc = wlc - marginlc.left - marginlc.right,        
+ratioUno = 0.4,
+hlc = wlc * ratioUno;
+
+
+
+var wl = wlc - marginlc.left - marginlc.right;
+var hl = hlc - marginlc.top - marginlc.bottom;
+
+var axisPadding = 20;
+
+
+var svgl = d3.select("#lineChart").append("svg")
+     .attrs({
+         width: wl,
+         height: hl
+     });
+
+
+
+
+// Domain and ranges
+    
+    var xscalel1 = d3.scaleLinear()
+      .domain([0, d3.max( dataline1, function(d){
+        return d.mes;
+        })
+      ])
+      .range([40, wl-40]);
+
+
+    var yscalel1 = d3.scaleLinear()
+    .domain([ 0, d3.max( dataline1, function(d){ 
+        return d.impuestoPorcentaje; 
+        })
+    ])
+    .range([hl-33,53]);
+
+
+
+    var xscalel2 = d3.scaleLinear()
+      .domain([0, d3.max( dataline2, function(d){
+        return d.mes;
+        })
+      ])
+      .range([40, wl-40]);
+
+    var yscalel2 = d3.scaleLinear()
+    .domain([ 0, d3.max( dataline2, function(d){ 
+        return d.impuestoPorcentaje; 
+        })
+    ])
+    .range([hl-33,53]);
+
+
+
+     var xAxisf =  d3.axisBottom(xscalel1);
+     var yAxisf =  d3.axisLeft(yscalel1);
+
+
+
+// Lines
+
+ var lineOne = d3.line()
+     .x(function(d) {
+          return xscalel1(d.mes);
+     })
+     .y(function(d) {
+         return yscalel1(d.impuestoPorcentaje);
+     })
+     .curve(d3.curveLinear);
+
+
+var lineTwo = d3.line()
+     .x(function(d) {
+          return xscalel2(d.mes);
+     })
+     .y(function(d) {
+         return yscalel2(d.impuestoPorcentaje);
+     })
+     .curve(d3.curveMonotoneX);
+
+
+
+
+
+
+ var vis = svgl.append("path")
+     .attrs({
+
+         d: lineOne(dataline1),
+         "stroke": "#008080",
+         "stroke-width": 2,
+         "fill": "none"
+
+     });
+
+
+  var vis2 = svgl.append("path")
+       .attrs({
+
+           d: lineTwo(dataline2),
+           "stroke": "orange",
+           "stroke-width": 2,
+           "fill": "none"
+
+       });
+
+
+
+
+  // Add the x Axis
+  svgl.append("g")
+      .style("fill", "none" )
+      .style("shape-rendering", "crispEdges" )
+      .style("stroke", "white" )
+      .style("color", "white" )
+      .attr("class" , "x axis")
+      .attr("transform", "translate(0," + (hl - 30) + ")")
+      .call( d3.axisBottom(xscalel1) );
+
+
+  // Add the y Axis
+  svgl.append("g")
+      .style("fill", "none" )
+      .style("shape-rendering", "crispEdges" )
+      .style("stroke", "white" )
+      .style("color", "white" )
+      .attr("class" , "x axis")
+      .attr("transform", " translate(" + (axisPadding +10) + ", 0) ")
+      .call( d3.axisLeft(yscalel1) );	        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -339,22 +525,29 @@
 	    // _____________________________________________ Pie Chart
 
 				var dataPie = [
-				  {"letter":"q","presses":1},
-				  {"letter":"w","presses":2},
-				  {"letter":"e","presses":2}
+  {"letter":"Perseverance","presses":25},
+  {"letter":"Sociability","presses":20},
+  {"letter":"Curiosity","presses":40},
+  {"letter":"Tolerance","presses":15}
 				];
 
 
-			    var marginPie = { top: 0, right: 0, bottom: 0, left: 0 },
-		        widthPie = parseInt(d3.select("#pieChart").style('width'), 10),
-		        widthPie = widthPie - marginPie.left - marginPie.right,
-		        //ratio doesn't always have to be perfect, just about the ratio between the height and width--so that it won't resize based on a height larger than the container
-		        ratioPie = 0.82,
-		        heightPie = widthPie * ratioPie;
-		        radius = Math.min(widthPie, heightPie) / 2;
+				        var marginPie = { top: 0, right: 0, bottom: 0, left: 0 },
+				        widthPie = parseInt(d3.select("#pieChart").style('width'), 10),
+				        widthPie = widthPie - marginPie.left - marginPie.right,
+				        //ratio doesn't always have to be perfect, just about the ratio between the height and width--so that it won't resize based on a height larger than the container
+				        ratioPie = 0.82,
+				        heightPie = widthPie * ratioPie;
+				        radius = Math.min(widthPie, heightPie) / 2;
+
+				 /*       
+				var width = 300,
+				  height = 300,
+				  radius = Math.min(width, height) / 2;
+				  */
 
 				var color = d3.scaleOrdinal()
-				  .range(["#2C93E8","rgba(201, 201, 201, 0.3)","rgba(234, 217, 88, 0.3)"]);
+				  .range(["rgba(74, 132, 166, 0.4)","rgba(74, 152, 165, 0.3)","rgba(77, 161, 210, 0.3)", "rgba(77, 191, 184, 0.3)" ]);
 				  
 				var pielabels = d3.pie()
 				  .value(function(d) { return d.presses; })(dataPie);
@@ -384,18 +577,19 @@
 				  .attr("d", arclabels)
 				  .style("fill", function(d) { 
 				                    return color(d.data.letter);
-				        });
+				        })
+				  .on("mouseover", function(d,i){
+				          d3.select(this).style("fill","white");
+				        })
+				  .on("mouseout", function(d,i){
+				          d3.select(this).style("fill", color(d.data.letter));
+				      });
 				  
 				g.append("text")
-				  .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-				  .text(function(d) { return d.dataPie.letter;}) 
-				  .style("fill", "#fff")
-				  .on("mouseover", function(d,i){
-					          d3.select(this).style("fill","yellow");
-					        })
-				  .on("mouseout", function(d,i){
-					          d3.select(this).style("fill", color(i));
-					      });
+				  .attr("transform", function(d) { return "translate(" + labelArclabels.centroid(d) + ")"; })
+				  .text(function(d) { return d.data.letter + ":" + "  " + d.data.presses  + '%';}) 
+				    .style("fill", "#222222")
+				    .style("color", "#222222");
 
 
 

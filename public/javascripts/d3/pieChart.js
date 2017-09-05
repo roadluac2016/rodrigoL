@@ -73,11 +73,11 @@ var svgPie = d3.select("#pieChart").append("svg")
 
 
 var dataPie = [
-  {"letter":"q","presses":1},
-  {"letter":"w","presses":2},
-  {"letter":"e","presses":2}
+  {"letter":"Perseverance","presses":25},
+  {"letter":"Sociability","presses":20},
+  {"letter":"Curiosity","presses":40},
+  {"letter":"Tolerance","presses":15}
 ];
-console.log(dataPie);
 
 
         var marginPie = { top: 0, right: 0, bottom: 0, left: 0 },
@@ -93,9 +93,12 @@ var width = 300,
   height = 300,
   radius = Math.min(width, height) / 2;
   */
-
 var color = d3.scaleOrdinal()
-  .range(["rgba(44, 147, 232, 0.4)","rgba(201, 201, 201, 0.3)","rgba(234, 217, 88, 0.3)"]);
+  .range(["rgba(85, 205, 252, 0.4)","rgba(74, 152, 165, 0.3)","rgba(77, 161, 210, 0.3)", "rgba(77, 191, 184, 0.3)" ]);
+
+var linearColorScalebcPie = d3.scaleLinear()
+            .domain([0, dataPie.length])
+            .range(["rgba(74, 198, 247, 0.2)", "rgba(3, 123, 170, 0.6)"]);
   
 var pielabels = d3.pie()
   .value(function(d) { return d.presses; })(dataPie);
@@ -123,20 +126,24 @@ var g = svglabels.selectAll("arc")
   
 g.append("path")
   .attr("d", arclabels)
-  .style("fill", function(d) { 
-                    return color(d.data.letter);
+  .style("fill", function(d,i){
+          return linearColorScalebcPie (i); //color(d.data.letter)
+          //return OrdinalColorScale (i);
         })
   .on("mouseover", function(d,i){
-          d3.select(this).style("fill","yellow");
+          d3.select(this).style("fill","white");
         })
   .on("mouseout", function(d,i){
-          d3.select(this).style("fill", color(i));
+          d3.select(this).style("fill", linearColorScalebcPie (i)); // color(d.data.letter)
       });
   
 g.append("text")
-  .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-  .text(function(d) { return d.dataPie.letter;}) 
-  .style("fill", "#fff");
+  .attr("transform", function(d) { return "translate(" + labelArclabels.centroid(d) + ")"; })
+  .text(function(d) { return d.data.letter + ":" + "  " + d.data.presses  + '%';}) 
+    .style("fill", "#222222")
+    .style("color", "#222222");
+
+
 
 
 

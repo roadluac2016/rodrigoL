@@ -1,19 +1,19 @@
 var links = [
 
   {source: "UX / UI", target: "HotJar", type: "suit"},
-  {source: "UX / UI", target: "Formísimo", type: "suit"},
-  {source: "UX / UI", target: "OptimalWorkShop", type: "resolved"},
+  {source: "UX / UI", target: "Formísimo", type: "resolved"},
+  {source: "UX / UI", target: "OptimalWorkShop", type: "suit"},
   {source: "UX / UI", target: "Career", type: "licensing"},
 
   
-  {source: "Front end Development", target: "Grunt JS", type: "resolved"},
+  {source: "Front end Development", target: "Grunt JS", type: "suit"},
   {source: "Front end Development", target: "HTML 5", type: "suit"},
   {source: "Front end Development", target: "CSS3", type: "suit"},
   {source: "Front end Development", target: "D3.js", type: "suit"},
   {source: "Front end Development", target: "Bootstrap", type: "suit"},
   {source: "Front end Development", target: "Jquery", type: "suit"},
   {source: "Front end Development", target: "GIT", type: "suit"},
-  {source: "Front end Development", target: "Google Maps API", type: "suit"},
+  {source: "Front end Development", target: "Google Maps API", type: "resolved"},
   {source: "Front end Development", target: "SEO", type: "suit"},
   {source: "SEO", target: "MetaData Structures", type: "suit"},
   {source: "Front end Development", target: "Career", type: "licensing"},
@@ -21,11 +21,11 @@ var links = [
 
   {source: "Design", target: "Photoshop", type: "suit"},
   {source: "Design", target: "Illusrtator", type: "suit"},
-  {source: "Design", target: "Image Magik", type: "suit"},
+  {source: "Design", target: "Image Magik", type: "resolved"},
   {source: "Design", target: "Career", type: "licensing"},
 
   {source: "Marketing", target: "Career", type: "licensing"},
-  {source: "Marketing", target: "Google AdWords", type: "licensing"},
+  {source: "Marketing", target: "Google AdWords", type: "resolved"},
  
 ];
 
@@ -38,28 +38,28 @@ links.forEach(function(link) {
 });
 
 
-        var margin = { top: 20, right: 10, bottom: 0, left: 10 },
-        width = parseInt(d3.select(".spiderBox").style('width'), 10),
+        var margin = { top: 0, right: 0, bottom: 0, left: 0 },
+        width = parseInt(d3.select("#spiderChart").style('width')),
         width = width - margin.left - margin.right,
         //ratio doesn't always have to be perfect, just about the ratio between the height and width--so that it won't resize based on a height larger than the container
-        ratio = 0.5,
-        height = width * ratio+10;
+        ratio = 0.47,
+        height = width * ratio;
 
 
 
 var simulation = d3.forceSimulation(nodes)
     .nodes(d3.values(nodes))
-    .force("link", d3.forceLink(links).distance(65))          
-    .force("charge", d3.forceManyBody().strength(-90))
-    //.force("collide", d3.forceCollide().radius(function(d) { return d.r + 0.5; }).iterations(2))
-   // .force("x", d3.forceX().strength(0.002))
-   // .force("y", d3.forceY().strength(0.002))               
-   .force("center", d3.forceCenter( width /2, height/2 ))
+    .force("link", d3.forceLink(links).distance(85))          
+    .force("charge", d3.forceManyBody().strength(-350))
+    .force("collide", d3.forceCollide().radius(function(d) { return d.r + 0.5; }).iterations(2))
+   .force("x", d3.forceX().strength(0.002))
+   .force("y", d3.forceY().strength(0.1))               
+   .force("center", d3.forceCenter( width /2, height/2.9 ))
     .on("tick", tick);
   //  .restart();
 
 
-var svg = d3.select(".spiderBox").append("svg")
+var svg = d3.select("#spiderChart").append("svg")
     .attr("width", width)
     .attr("height", height);
 
@@ -70,7 +70,7 @@ svg.append("defs").selectAll("marker")
       .append("marker")
       .attr("id", function(d,i) { return d; })
       .attr("viewBox", "0 -5 100 100")
-      .attr("refX", 1)
+      .attr("refX", 100)
       .attr("refY", -1.5)
       .attr("markerWidth", 2)
       .attr("markerHeight", 2)
@@ -106,7 +106,7 @@ var circle = svg.append("g").selectAll("circle")
       
 // DRAAG
 function dragstarted() {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  if (!d3.event.active) simulation.alphaTarget(0.35).restart();
   d3.event.subject.fx = d3.event.subject.x;
   d3.event.subject.fy = d3.event.subject.y;
 }
@@ -144,11 +144,10 @@ function linkArc(d,i) {
       dy = d.target.y - d.source.y,
       dr = Math.sqrt(dx * dx + dy * dy);
   return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
-
 }
 
 function transform(d) {
-  return "translate(" + d.x + "," + d.y + ")";
+  return "translate(" + d.x + ", " + d.y + " )";
 }
  
 
